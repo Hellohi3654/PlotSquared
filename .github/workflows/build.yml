@@ -15,3 +15,10 @@ jobs:
           java-version: "16"
       - name: "Clean Build"
         run: "./gradlew clean build"
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          # Artifact name
+          name: Plot
+          # A file, directory or wildcard pattern that describes what to upload
+          path: target/
